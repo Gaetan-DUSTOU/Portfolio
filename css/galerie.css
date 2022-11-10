@@ -1,0 +1,90 @@
+#galerie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 65vh;
+}
+.titre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 0 0 0;
+}
+#box {
+    position: relative;
+    width: 225px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: animate_gal 30s linear infinite;
+    animation-duration: 60s;
+    margin: 0 auto;
+}
+
+@keyframes animate_gal {
+    0%{
+        transform: perspective(1000px) rotatey(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotatey(360deg);
+    }
+}
+
+#box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotatey(calc(var(--i) * 30deg)) translatez(450px);
+}
+
+#box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: 0.30s;
+}
+
+#box span img:hover {
+    transform: scale(1.1);
+}
+
+/*popup image*/
+.popup-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-img span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor:pointer;
+    z-index: 100;
+}
+
+.popup-img img{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 0%);
+    border: 5px solid #fff;
+    height: 100%;
+    object-fit: cover;
+}
