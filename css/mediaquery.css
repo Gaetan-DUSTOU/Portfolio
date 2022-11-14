@@ -1,0 +1,68 @@
+@media (max-width: 1080px){
+    form {
+        width: 65%!important;
+        margin-top: 50px!important;
+        height:  540px!important;
+    }
+}
+
+@media (max-width: 780px){
+    header {
+        height: 190px!important;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center!important;
+        padding: 0 20px!important;
+    }
+    nav img {
+        margin: 0 auto 10px;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    h1 {
+        font-size: 1.4em!important;
+        padding: 15px!important;
+    }
+    p {
+        font-size: 1em!important;
+        padding: 0 20px!important;
+        margin-top: 15px!important;
+    }
+
+    .copy{
+        padding: 0px!important;
+        margin: 0!important;
+    }
+    .btn {
+        margin-bottom: 90px;
+    }
+    form {
+        width: 90%!important;
+        margin-top: 50px!important;
+        height:  540px!important;
+    }
+    h2 {
+        margin: 0!important;
+    }
+    .links {
+        width: auto!important;
+        margin: 0!important;
+    }
+    .contact {
+        margin: 15px 0!important;
+    }
+    .send {
+        margin-top: 30px;
+    }
+    footer {
+        height: 60px!important;
+        padding: 0 20px!important;
+        z-index: 50;
+    }
+
+    #galerie {
+        margin-top: 30px!important;
+    }
+}

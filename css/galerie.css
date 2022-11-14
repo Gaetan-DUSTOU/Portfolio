@@ -17,12 +17,12 @@
     width: 225px;
     height: 150px;
     transform-style: preserve-3d;
-    animation: animate_gal 30s linear infinite;
+    animation: animate 30s linear infinite;
     animation-duration: 60s;
     margin: 0 auto;
 }
 
-@keyframes animate_gal {
+@keyframes animate {
     0%{
         transform: perspective(1000px) rotatey(0deg);
     }
@@ -87,4 +87,43 @@
     border: 5px solid #fff;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 768px){
+    #box {
+        animation: animate2 30s linear infinite;
+        animation-duration: 60s;
+        margin: 90px auto 130px;
+        scale: 0.8;
+    }
+    
+    @keyframes animate2 {
+        0%{
+            transform: perspective(1000px) rotatex(0deg);
+        }
+        100%{
+            transform: perspective(1000px) rotatex(-360deg);
+        }
+    }
+    
+    #box span {
+        transform: rotatex(calc(var(--i) * 30deg)) translatez(300px);
+    }
+
+    .popup-img img{
+        position: absolute;
+        top: 20%;
+        height: auto;
+        width: 100%;
+    }
+}
+@media (max-width: 1080px){
+    #box {
+        scale: 0.8;
+    }
+}
+@media (max-width: 870px){
+    #box {
+        scale: 0.7;
+    }
 }
